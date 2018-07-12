@@ -11,8 +11,7 @@ namespace GradeBook.GradeBooks
 {
     public class BaseGradeBook
     {
-
-        public GradeBookType Type = new GradeBookType();     
+        public GradeBookType Type { get; set; }
 
         public string Name { get; set; }
         public List<Student> Students { get; set; }
@@ -21,6 +20,7 @@ namespace GradeBook.GradeBooks
         {
             Name = name;
             Students = new List<Student>();
+            Type = new GradeBookType();
         }
 
         public void AddStudent(Student student)
@@ -157,6 +157,8 @@ namespace GradeBook.GradeBooks
                         internationalPoints += student.AverageGrade;
                         break;
                 }
+
+            
 
                 switch (student.Type)
                 {
