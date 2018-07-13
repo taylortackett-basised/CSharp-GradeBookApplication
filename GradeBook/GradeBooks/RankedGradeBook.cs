@@ -16,8 +16,14 @@ namespace GradeBook.GradeBooks
 
         public RankedGradeBook(string name) : base(name)
         {
-            
-            Type = Enums.GradeBookType.Ranked;
+            if (Students.Count >= 5)
+            {
+                Type = Enums.GradeBookType.Ranked;
+            }
+            else
+            {
+                Console.WriteLine(error);
+            }
             
         }
 
