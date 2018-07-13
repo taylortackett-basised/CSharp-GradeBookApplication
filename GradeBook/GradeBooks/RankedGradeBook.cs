@@ -6,9 +6,26 @@ namespace GradeBook.GradeBooks
 {
     public class RankedGradeBook : BaseGradeBook
     {
-        RankedGradeBook(string name) : base(name)
+
+        public override char GetLetterGrade(double averageGrade)
         {
-            Type = Enums.GradeBookType.Ranked;
+            return base.GetLetterGrade(averageGrade);
         }
+
+        public InvalidOperationException error = new InvalidOperationException("Ranking-grading requires a minimum of 5 students to work.");
+
+        public RankedGradeBook(string name) : base(name)
+        {
+            
+            Type = Enums.GradeBookType.Ranked;
+            
+        }
+
+        
+
+
     }
+
+   
 }
+

@@ -6,7 +6,7 @@ namespace GradeBook.GradeBooks
 {
     public class StandardGradeBook : BaseGradeBook
     {
-        StandardGradeBook(string name) : base(name)                  // adding : base(name) after constructor declaration makes the program execute code in both classes (parent/child)
+        public StandardGradeBook(string name) : base(name)                  // adding : base(name) after constructor declaration makes the program execute code in both classes (parent/child)
         {
             Type = Enums.GradeBookType.Standard;
         }
